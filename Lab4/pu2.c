@@ -3,9 +3,9 @@
 #define N 100000
 
 int main () {
-    unsigned int v [ N ];
+    unsigned int v[N];
     for (int i = 0; i < N ; i ++) {
-        v [ i ] = i + 1;
+        v[i] = i + 1;
     }
 
     unsigned long long evenSum = 0;

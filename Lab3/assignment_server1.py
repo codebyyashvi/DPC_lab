@@ -67,5 +67,4 @@ def start_server():
         conn, addr = server.accept()
         threading.Thread(target=handle_connection, args=(conn,)).start()
 
-
 start_server()

@@ -53,3 +53,6 @@ int main(){
 
     return 0;
 }
+
+// Commands to run: gcc pu1.c -o pu1 -fopenmp
+// .\pu1

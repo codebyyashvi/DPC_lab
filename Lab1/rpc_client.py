@@ -21,9 +21,9 @@ while True:
         print("Only digits allowed.")
         continue
 
-num = int(num)
-result = proxy.check(op, num)
-if op == "palindrome":
-    print("Palindrome result:", "YES" if result else "NO")
-else:
-    print("Armstrong result:", "YES" if result else "NO")
+    num = int(num)
+    result = proxy.check(op, num)
+    if op == "palindrome":
+        print("Palindrome result:", "YES" if result else "NO")
+    else:
+        print("Armstrong result:", "YES" if result else "NO")

@@ -23,4 +23,4 @@ while True:
     if message.upper() == "EXIT":
         break
 
-    client_socket.close()
+client_socket.close()

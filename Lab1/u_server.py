@@ -39,18 +39,19 @@ def handle_client(client_socket, client_address):
             break
     client_socket.close()
     print(f"[DISCONNECTED] {client_address} disconnected.")
-    # ---------------- MAIN SERVER ----------------
-    server_socket = socket.socket()
-    server_socket.bind(("localhost", 12345))
-    server_socket.listen(5)
-    print("Server running and waiting for clients...")
 
-    while True:
-        client_socket, client_address = server_socket.accept()
+# ---------------- MAIN SERVER ----------------
+server_socket = socket.socket()
+server_socket.bind(("localhost", 12345))
+server_socket.listen(5)
+print("Server running and waiting for clients...")
 
-        # Create a new thread for every client
-        thread = threading.Thread(
-            target=handle_client,
-            args=(client_socket, client_address)
-        )
-        thread.start()
+while True:
+    client_socket, client_address = server_socket.accept()
+
+    # Create a new thread for every client
+    thread = threading.Thread(
+        target=handle_client,
+        args=(client_socket, client_address)
+    )
+    thread.start()

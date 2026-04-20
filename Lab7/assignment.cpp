@@ -115,7 +115,5 @@ int main(int argc, char** argv) {
 
         cout << "Verify (Process 1): " << verify << endl;
     }
-
-    MPI_Finalize();
     return 0;
 }
